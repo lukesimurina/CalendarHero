@@ -271,7 +271,8 @@ class CalendarHero:
         print("Successfully logged in")
 
     def get_schedule_data(self, from_date, to_date):
-        schedule_url = f"https://employmenthero.yourpayroll.com.au/Employee/6620264/Home/GetScheduleEvents?fromDate={from_date}&toDate={to_date}&showAllLeave=False"
+        employee_id = input("What is your employee id?: ")
+        schedule_url = f"https://employmenthero.yourpayroll.com.au/Employee/{employee_id}/Home/GetScheduleEvents?fromDate={from_date}&toDate={to_date}&showAllLeave=False"
         self.driver.get(schedule_url)
 
         pre_tag = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "pre")))
