@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
-from decouple import config
 import json
 import pandas as pd
 import os.path
@@ -79,7 +78,7 @@ class Roster:
                 token.write(creds.to_json())
 
         self.service = build("calendar", "v3", credentials=creds)
-        self.calendar_id = "882faf51384ae373f5cf26226ebd11d99300c3a3f320e2fe7507f5dcc26cce83@group.calendar.google.com"
+        self.calendar_id = input("Enter calendar id:")
         self.timezone = "Australia/Sydney"
 
         self.google_shifts = []
@@ -349,7 +348,7 @@ class CalendarHero:
 
 
 if __name__ == "__main__":
-    app = CalendarHero("luke@simurina.com", config("PASSWORD"))
+    app = CalendarHero(input("Enter employment hero username: "), input("Enter employement hero password: "))
     try:
         app.login()
         app.process_shifts("2023-01-01", "2023-12-31")
