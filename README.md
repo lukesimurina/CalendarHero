@@ -26,8 +26,8 @@ Here's how to get started:
    - Activate the environment (instructions vary by OS).
 
 4. **Set your Google Calendar ID**:
-   - Open `main.py` and find `CALENDAR_ID = ""`.
-   - Replace the empty string with your calendar's ID (found in the URL).
+   - Open `main.py` and find `self.calendar_id = ""`.
+   - Replace the empty string with your calendar's ID (found in settings of the new calendar you created).
 
 5. **Run the app**:
    ```bash
