@@ -1,5 +1,0 @@
-Todo:
-- Integrate with Google API
-- Work out how Google API works with duplicate events
-    - Will probs need to create a seperate calender in google, then download all the current events after the current date. Compare that to the events scraped from the app i created and then add any events which are not already in there. Or remove any events which are not meant to be there. Or edit any events which are different.
-- Make UI better (maybe make it a django or flask project somehow)
