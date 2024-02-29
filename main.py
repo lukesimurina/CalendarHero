@@ -78,7 +78,7 @@ class Roster:
                 token.write(creds.to_json())
 
         self.service = build("calendar", "v3", credentials=creds)
-        self.calendar_id = input("Enter calendar id:")
+        self.calendar_id = ""
         self.timezone = "Australia/Sydney"
 
         self.google_shifts = []
